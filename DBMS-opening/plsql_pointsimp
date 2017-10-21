@@ -1,0 +1,100 @@
+
+1. single apostrophe should be used
+2. to embed 1 apostrophes use 2 apostrophe
+3. NN table_name.col_name%type
+4. select col_name  into NN  from table_name where........
+
+
+
+if() then
+	jhhjjh
+elsif () then
+
+else
+
+end if;
+
+
+
+
+syntax of case
+
+number(total, after decimal)
+
+continue agar aya to fer dubhara loop upr chla jata h with current values
+
+chr(13)
+
+substr(string,start pos,length form start pos)
+
+
+update wali cheez ka dhyan rkhio ki agr condition ni di to poora table update ho jaega
+
+
+what all to implement ?
+
+1) type ans subtype
+
+2)DECLARE
+   c_id customers.id%type := 1;---------------------------
+   c_name  customers.name%type;
+   c_addr customers.address%type;
+   c_sal  customers.salary%type;
+BEGIN
+   SELECT name, address, salary INTO c_name, c_addr, c_sal
+   FROM customers
+   WHERE id = c_id;-------------------------
+
+   dbms_output.put_line
+   ('Customer ' ||c_name || ' from ' || c_addr || ' earns ' || c_sal);
+END;
+/
+
+
+3) if elsif else ...check for brackets while giving condition
+
+4)char ... ascii....chr()
+
+
+5)case
+6)for and while loop  .... exit when
+
+7)implement prime number code
+
+8)Learn string functions?????????????????????????????
+
+9)array and varray
+
+10)procedure using => and IN OUT 			and 	functionssssss
+
+11) PERFECT WAY OF USING CURSORS
+  
+DECLARE
+   c_id customers.id%type;
+   c_name customers.name%type;
+   c_addr customers.address%type;
+   CURSOR c_customers is
+      SELECT id, name, address FROM customers;
+BEGIN
+   OPEN c_customers;
+   LOOP
+      FETCH c_customers into c_id, c_name, c_addr;
+      EXIT WHEN c_customers%notfound;
+      dbms_output.put_line(c_id || ' ' || c_name || ' ' || c_addr);
+   END LOOP;
+   CLOSE c_customers;
+END;
+/
+
+
+12)one example each for table based record and cursor based record
+
+
+13)one example of all three exceptions
+
+14)At last see all the class questions and differece document.
+
+15)taking input
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Leave form</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="lv_form.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>  
+                <a class="one" href="index3.php"><font size=3><b>Dashboard</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="#"><font size=3><b>Orders</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="lvform.html"><font size=3><b>Leave form</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="profile.php"><font size=3><b>Profile</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="comp.html"><font size=3><b>Complains</b></font></a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper ">   
+        <div id="overview">
+            <center>
+            <h1><b><font size=6 ><u>ORDERS</font></u></b></h1>
+            
+<form action="dbmsorders.php" method="post">
+<b><font size=5>
+        Student Name:<input type="text" name="name" required><br><br>
+        Registeration Number:<input type="text" name="regno" required><br><br>
+        Date Of Arrival:<input type="date" name="doa" required><br><br>
+        Address:<input type="text" name="address" required><br><br>
+        RoomNumber:<input type="number" name="roomno" required><br>
+</font></b>
+        <input type="submit" value="Submit order" name="Submit"/ class="btn btn-default">
+</form><br><br>
+<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>&nbsp&nbsp&nbsp&nbsp
+<a href="lvform_status.php" class="btn btn-default">
+Orders
+</a>
+
+</center>
+</div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+</html>

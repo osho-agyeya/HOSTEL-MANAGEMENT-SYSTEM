@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<style type="text/css">
+	input{
+    width: 150%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+    border: 3px solid #555;
+    background-color: lightblue;
+}
+.boldtable, .boldtable TD, .boldtable TH
+{
+font-family:sans-serif;
+font-size:20pt;
+color:black;
+}
+</style>
+<body><form action="registration_dbms.php" method="post">
+    <h1 align="center">Enter Student Details:</h1>
+    <p>**All fields are mandatory</p>  
+    <table align="center" class="boldtable">
+    <tr>
+    	<td>Student Name:</td>
+    	<td><input type="text" name="name" id="" required></td>
+        </tr>
+    	<td>Student E-Mail:</td>
+    	<td><input type="text" name="email" id="" required></td>
+        </tr> 
+    	<tr><td>Registration Number:</td>
+    	<td><input type="text" name="reg_no" id="" required></td>
+        </tr>
+    	<tr><td>Branch:</td>
+    	<td><input type="text" name="branch" id="" required></td>
+        </tr>
+        <td>Mobile number:</td>
+        <td><input type="text" name="mob_no" id="" required></td>
+        </tr>
+    	<tr><td>Room type:</td>
+    	<td><input type="text" name="room_type" id="" required></td>
+        </tr>
+    	<tr><td>Room number:</td>
+    	<td><input type="text" name="room_no" id="" required></td>
+        </tr>
+        <tr><td>Bed Type:</td>
+        <td><input type="text" name="bed_type" id="" required></td>
+        </tr>
+    	<tr><td>Mess type:</td>
+    	<td><input type="text" name="mess_type" id="" required></td>
+        </tr>
+        <tr><td>Password:</td>
+        <td><input type="password" name="password" id="" required></td>
+        </tr>
+        <tr>
+        <td><input type="submit" name="submit" value="submit" id=""></td>
+              </tr>
+    </table>
+    <br><br>
+</form>
+            <form action="registration_dbms.php" method="post">  <input type="submit" name="s2" value="home" >
+</form>
+
+</body>
+</html>

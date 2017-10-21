@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IWP_question1</title>
+	
+	<script>
+		function validate(){
+			var flag = true;
+			var flag1 = true;
+			var flag2 = true;
+			var first = document.myform.first.value;
+			var last = document.myform.last.value;
+			var username = document.myform.username.value;
+			var password = document.myform.password.value;
+			var confirmpassword = document.myform.confirm.value;
+			var month = document.myform.month.value;
+			var day = parseInt(document.myform.day.value);
+			var year = parseInt(document.myform.year.value);
+			var gender = document.myform.gender.value;
+			var phone = parseInt(document.myform.phone.value);
+			var email = document.myform.email.value;
+			var location = document.myform.location.value;
+
+			if(!(/^[A-Za-z ]+$/).test(first)){
+				window.alert("Please enter a valid first name");
+				flag = false;
+				return;
+			}
+
+			
+			if(!(/^[A-Za-z ]+$/).test(last)){
+				window.alert("Please enter a valid last name");
+				flag = false;
+				return;
+			}
+
+			
+			if(!(/^[A-Za-z ]+$/).test(username)){
+				window.alert("Please enter a valid username");
+				flag = false;
+				return;
+			}
+
+			
+			if(!(/^[A-Za-z0-9]+$/).test(password)){
+				window.alert("Please enter a valid password having letters and digits only.");
+				flag = false;
+				flag1 = false;
+				return;
+			}
+
+			if((password.length<8)&&(flag1)){
+				window.alert("Please enter a valid password having atleast 8 characters.");
+				flag = false;
+				return;
+			}
+
+			
+			if(!(/^[A-Za-z0-9]+$/).test(confirmpassword)){
+				window.alert("Please enter a valid confirmpassword having letters and digits only.");
+				flag = false;
+				flag2 = false;
+				return;
+			}
+
+			if((confirmpassword.length<8)&&(flag2)){
+				window.alert("Please enter a valid confirmpassword having atleast 8 characters.");
+				flag = false;
+				return;
+			}
+
+			
+			if((password !== confirmpassword)&&(flag1)&&(flag2)){
+				window.alert("The password and confirmpassword did not match.")
+				flag= false;
+				return;
+			}
+
+			
+			if(month === '-1'){
+				window.alert("Please select a month.");
+				flag = false;
+				return;
+			}
+
+			
+			if((day <= 0)&&(day > 31)){
+				window.alert("Please enter a valid date.");
+				flag = false;
+				return;
+			}
+
+			
+			if(!(/^[0-9]{4}$/).test(year)){
+				window.alert("Please enter year in the format yyyy.");
+				flag = false;
+				return;
+			}
+
+			
+			if(gender === '-1'){
+				window.alert("Please select a gender.");
+				flag = false;
+				return;
+			}
+
+			
+			if(!(/^[0-9]{10}$/).test(phone)){
+				window.alert("Please enter a 10 digit phone number.");
+				flag = false;
+				return;
+			}
+
+			
+			var mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if(!email.match(mail)){
+				window.alert("Please enter an appropriate email address");
+				flag = false;
+				return;
+			}
+		
+			
+			if(flag){
+				window.alert("The form is successfully submitted");
+			}
+
+		}
+	</script>
+	<style type="text/css">
+		.learn{
+			color: grey;
+			height: 25%;
+			width: 93%;
+			background-color: white;
+			padding-bottom: -10%;
+			font-size: 90%;
+			padding: 2%;
+		}
+		.learn a{
+			text-decoration: none;
+			color: blue;
+
+		}
+		.block{
+			height: 630px;
+			width: 350px;
+			background-color: #F0F0E8;
+			margin: auto auto;
+			font-size: 15px;
+			font-family: Comic;
+		}
+		.block div{
+			padding-left: 7%;
+		}
+		.step{
+			margin-bottom: 10%;
+		}
+		.name1{
+			padding-top: 8%;
+		}
+	</style>
+</head>
+<body>
+	<div class="block">
+		<form name="myform">
+			<div class="name1">
+				<span style="font-weight: bold;">Name</span><br>
+				<input type="text" name="first" value="" placeholder="First" style="width: 41%;height: 60%;padding: 1% 2% 1% 2%;"></input>&nbsp;&nbsp;<input name="last" value="" placeholder="Last" style="width: 41%;padding: 1% 2% 1% 2%;"></input>	
+			</div><br>
+			<div class="username">
+				<span style="font-weight: bold;">Choose your username</span><br>
+				<input type="text" name="username" value="" placeholder="@gmail.com" style="width: 90%;padding: 1% 2% 1% 2%;text-align: right;direction: ltr;"</input>	
+			</div><br>
+			<div class="password">
+				<span style="font-weight: bold;">Create a password</span><br>
+				<input type="password" name="password" value="" style="width: 90%;padding: 1% 2% 1% 2%;"></input>
+			</div><br>
+			<div class="confirm">
+				<span style="font-weight: bold;">Confirm your password</span><br>
+				<input type="password" name="confirm" value="" style="width: 90%;padding: 1% 2% 1% 2%;"></input>
+			</div><br>
+			<div class="bday">
+				<span style="font-weight: bold;">Birthday</span><br>
+				<select name="month" style="width: 32%;background-color: #F0F0E8;padding: 1% 2% 1% 2%;">
+					<option value="-1" selected disabled>Month</option>
+					<option value="January">January</option>
+					<option value="February">February</option>
+					<option value="March">March</option>
+					<option value="April">April</option>
+					<option value="May">May</option>
+					<option value="June">June</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+					<option value="October">October</option>
+					<option value="November">November</option>
+					<option value="December">December</option>
+				</select>&nbsp;&nbsp;
+				<input type="text" name="day" value="" placeholder="Day" style="width: 17%;padding: 1% 2% 1% 2%;"></input>&nbsp;&nbsp;
+				<input type="text" name="year" placeholder="Year" style="width: 28%;padding: 1% 2% 1% 2%;"></input>
+			</div><br>
+			<div class="gender">
+				<span style="font-weight: bold;">Gender</span><br>
+				<select name="gender" style="width: 95%;background-color: #F0F0E8;padding: 1% 2% 1% 2%;">
+					<option value="-1" selected disabled>I am...</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div><br>
+			<div class="phone">
+				<span style="font-weight: bold;">Mobile phone</span><br>
+				<input type="text" name="phone" value="" placeholder="India +91" style="width: 90%;padding: 1% 2% 1% 2%;"></input>
+			</div><br>
+			<div class="email">
+				<span style="font-weight: bold;">Your current email address</span><br>
+				<input type="text" name="email" value="" style="width: 90%;padding: 1% 2% 1% 2%;"></input>
+			</div><br>
+			<div class="location">
+				<span style="font-weight: bold;">Location</span><br>
+				<select name="location" style="width: 95%;padding: 1% 2% 1% 2%;background-color: #F0F0E8;">
+					<option value="-1" selected disabled>Select a country</option>
+					<option value="India">New Zealand</option>
+					<option value="Pakistan">China</option>
+					<option value="England">England</option>
+					<option value="New Zealand">India</option>
+					<option value="Australia">Australia</option>
+					<option value="Zimbabwe">Zimbabwe</option>
+					<option value="Brazil">Brazil</option>
+					<option value="Canada">Canada</option>
+					<option value="Cameroon">Cameroon</option>
+					<option value="Colombia">Colombia</option>
+					<option value="China">Pakistan</option>
+				</select>
+			</div><br>
+			<div class="step">
+				<input type="submit" name="nextstep" value="Next step" onclick="validate();" style="background-color: rgb(0, 146, 183); color: white;padding: 1.5%;height: 25%;width: 25%;float: right;margin-right: 5%;"></input>
+			</div><br>
+			<div class="learn">
+				<a href="learnmore.html">Learn more</a> about why we ask for this information.
+			</div>
+		</form>
+	</div>
+</body>
+</html>

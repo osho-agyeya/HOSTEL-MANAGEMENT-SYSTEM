@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Leave form</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lv_form.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>  
+                <a class="one" href="index3_w.html"><font size=3><b>Dashboard</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="#"><font size=3><b>Orders</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="lvform_w.html"><font size=3><b>Leave form</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="message_w.html"><font size=3><b>Message Terminal</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="status_layout_w.html"><font size=3><b>Complains</b></font></a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper ">   
+        <div id="overview">
+            <center>
+            <h1><b><font size=6 ><u>Leave Request Form</font></u></b></h1>
+            
+    <form action="leaveform.php" method="post">
+    <b><font size=5>Authority: </font><input type="text" value="warden1" name="authority" readonly required/><br><br>
+    <font size=5>Leave Address: </font><br><textarea placeholder="Leave Address" name="type" cols="30" rows="5" required></textarea><br><br>
+    <font size=5>Leave Reasons: </font><input type="text" name="reason" placeholder="Reason" required/><br><br>
+    <font size=5>Date of leaving: </font><input type="date" name="go" required/><br><br>
+    <font size=5>Date of Arriving: </font><input type="date" name="come" required/></b><br><br>
+    <input type="submit" name="submit" value="submit" />
+    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+</form>
+</center>
+</div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+</html>

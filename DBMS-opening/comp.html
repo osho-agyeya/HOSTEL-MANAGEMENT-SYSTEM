@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="full">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/complain.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>  
+                <a class="one" href="index3.php"><font size=3><b>Dashboard</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="order_accept.php"><font size=3><b>Orders</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="lvform.html"><font size=3><b>Leave form</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="profile.php"><font size=3><b>Profile</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="comp.html"><font size=3><b>Complains</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="logout.php"><font size=3><b>logout</b></font></a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper ">   
+        <div id="overview">
+        <center>
+        <h1>Register Complains here</h1>
+    <form action="complaint.php" method="post">
+    <b><font size=5>Name: </font></b><input type="text" name='name' id='name' required><br><br>
+    <b><font size=5>Registration Number: </font></b><input type='text' name='regno' id='regno' required><br><br>
+    <b><font size=5>Room Number: </font></b><input type="text" name='room' id='room' required><br><br>
+    <b><font size=5>Complaint type: <select name="type"><br><br>
+    <option value="Washroom">Washroom</option>
+    <br><br>
+    <option value="AC type">AC type</option>
+    <br><br>
+    <option value="Water Problems">Water Problems</option>
+    <br><br>
+    <option value="Electricity">Electricity</option>
+    <br><br>
+    <option value="Cleaning">Cleaning</font></option>
+    </select><br><br>
+    Describe Your Complaint.<br><br>
+  <textarea name="describe" cols="30" rows="5"> </textarea><br><br>
+<input type="submit" name="submit" value="submit" class="btn btn-default"><br><br>
+</font>
+</center>
+</b>
+</form>
+<center>
+<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>&nbsp&nbsp
+<a href="status_layout_s.php" class="btn btn-default">
+Complain history
+</a>
+</center>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>The Big Picture - Start Bootstrap Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/the-big-picture.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class="one" href="index3.html"><font size=3><b>Dashboard</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="#"><font size=3><b>Orders</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="lvform.html"><font size=3><b>Leave form</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="profile.html"><font size=3><b>Profile</b></font></a>
+                </li>
+                <li>
+                    <a class="one" href="comp.html"><font size=3><b>Complains</b></font></a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper ">   
+        <div id="overview">
+        <fieldset>
+            <input placeholder="Search here" type="text" id="search" >
+            <input type="submit" value="go" id="sub" >
+        </fieldset>
+        <h1 align="center">WELCOME</h2>
+        <h1 align="center">To The Hostel Management System</h2>
+        <table>
+            <th text-align="center">
+                MESSAGES
+            </th>
+            <tr><td>MESSAGE 1</td></tr>
+            <tr><td>MESSAGE 2</td></tr>
+            <tr><td>MESSAGE 3</td></tr>
+            <tr><td>MESSAGE 4</td></tr>
+            <tr><td>MESSAGE 5</td></tr>
+        </table>
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+</html>

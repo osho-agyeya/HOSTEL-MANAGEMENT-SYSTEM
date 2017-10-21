@@ -1,0 +1,83 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+<img  src="..\DBMS\DBMS-bg-1.jpg" id="full-screen-background-image" /> 
+ <div id="wrapper">
+  <h1 class='headers' align ="center" >Welcome to our</h1><h1 class='headers' align ="center" > Hostel Management System</h1>
+<h1 align="center"></h1>
+<div id="login">
+  <h1 class="register-title"><strong>Please login.</strong></h1>
+    <form class="register" action="login_dbms.php" method="post">
+    <div class="register-switch">
+      <input type="radio" name="sex" value="owner" id="sex_f" class="register-switch-input" checked>
+      <label for="sex_f" class="register-switch-label">Warden</label>
+      <input type="radio" name="sex" value="user" id="sex_m" class="register-switch-input">
+      <label for="sex_m" class="register-switch-label">Student</label>
+    </div>
+    <input type="email" name="email" class="register-input" placeholder="Email address" required>
+    <input type="password" name="pass" class="register-input" placeholder="Password" required>
+    <input type="text" name="uid" class="register-input" placeholder="UserId" required>
+    <input type="submit" name="submit" value="LOGIN" class="register-button" required>
+  </form>
+<p><span class="btn-round">or</span></p></div>
+
+                    <h2 align="center">
+                        <a href="#loginScreen" class="a_demo_two">
+                            Student Registration
+                        </a>
+                    </h2>
+                    <div id="loginScreen">
+    <a href="home1.html" class="cancel">&times;</a>
+    <table>
+    <tr>
+    <form action="registration_dbms.php" method="post">
+        <td>Student Name:</td>
+        <td><input type="text" name="name" id="student-inp" required></td>
+        </tr>
+        <td>Student E-Mail:</td>
+        <td><input type="text" name="email" id="student-inp" required></td>
+        </tr> 
+        <tr><td>Registration Number:</td>
+        <td><input type="text" name="reg_no" id="student-inp" required></td>
+        </tr>
+        <tr><td>Branch:</td>
+        <td><input type="text" name="branch" id="student-inp" required></td>
+        </tr>
+        <td>Mobile number:</td>
+        <td><input type="text" name="mob_no" id="student-inp" required></td>
+        </tr>
+        <tr><td>Room type:</td>
+        <td><input type="text" name="room_type" id="student-inp" required></td>
+        </tr>
+        <tr><td>Room number:</td>
+        <td><input type="text" name="room_no" id="student-inp" required></td>
+        </tr>
+        <tr><td>Bed Type:</td>
+        <td><input type="text" name="bed_type" id="student-inp" required></td>
+        </tr>
+        <tr><td>Mess type:</td>
+        <td><input type="text" name="mess_type" id="student-inp" required></td>
+        </tr>
+        <tr><td>Password:</td>
+        <td><input type="password" name="password" id="student-inp" required></td>
+        </tr><tr><td><input type="submit" name="submit" value="submit"></td>
+        </tr>
+    </table>
+    </form>
+</div>
+<div id="cover" >
+</div>
+<div id="cover" >
+</div>
+</div>
+</body>
+</html>
